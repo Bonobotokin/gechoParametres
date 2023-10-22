@@ -4,7 +4,8 @@
             <ul class="nav nav-tabs notika-menu-wrap menu-it-icon-pro">
                 <li id="homes"><a href="{{ route('home') }}"><i class="notika-icon notika-house"></i> Acceuil</a>
                 </li>
-
+                <li id="personnels"><a href="{{ route('personnels') }}"><i class="notika-icon notika-house"></i>Personnels</a>
+                </li>
             </ul>
         </div>
     </div>
