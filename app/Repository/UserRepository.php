@@ -15,12 +15,14 @@ class UserRepository implements UserRepositoryInterface
 
     static function getAllUser()
     {
-        $data = User::get()
+        $data = User::with('roles')->get()
             ->map(function ($data) {
+
                 return [
                     'id' => $data->id,
                     'nom_user' => $data->name,
-                    'email' => $data->email
+                    'email' => $data->email,
+                    'role' => $data->designation_role
                 ];
             });
 

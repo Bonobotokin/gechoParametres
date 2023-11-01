@@ -17,6 +17,12 @@
             <div class="btn-list">
 
                 <a type="button" href="{{ route('personnel.create') }}" class="btn btn-primary waves-effect">Nouveaux Personnels</a>
+
+
+                <a type="button" href="{{ route('personnel.create') }}" class="btn btn-primary waves-effect">Nouveaux Roles</a>
+
+
+                <a type="button" href="{{ route('personnel.create') }}" class="btn btn-primary waves-effect">Nouveaux Fonctions</a>
             </div>
             <div class="table-responsive">
                 <table id="example1" class="table table-bordered table-striped">
@@ -26,6 +32,7 @@
                             <th> Nom & prenom </th>
                             <th> Telephone </th>
                             <th> Fonctions </th>
+                            <th> Comptes </th>
                             <th> Action </th>
                         </tr>
                     </thead>
@@ -45,17 +52,27 @@
                             <td>
                                 <p>
                                     @if(!is_null($personnel['telephone_1']))
-                                    +261{{$personnel['telephone_1']}}
+                                    0{{$personnel['telephone_1']}}
                                     @endif
                                 </p>
                                 <p>
                                     @if(!is_null($personnel['telephone_2']))
-                                    +261{{$personnel['telephone_2']}}
+                                    0{{$personnel['telephone_2']}}
                                     @endif
                                 </p>
                             </td>
                             <td> {{$personnel['fonction']}} </td>
-
+                            <td>
+                                <p>
+                                    Nom : {{ $personnel['pseudo'] }}
+                                </p>
+                                <p>
+                                    Email : {{ $personnel['email'] }}
+                                </p>
+                                <p>
+                                    Role : {{ $personnel['role'] }}
+                                </p>
+                            </td>
                             <td>
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="false">

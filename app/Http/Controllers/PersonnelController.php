@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Action\PersonnelsAction;
+use App\Http\Requests\StorePersonnelsRequest;
 use App\Repository\FonctionRepository;
 use Illuminate\Http\Request;
 use Illuminate\Contracts\View\View;
@@ -64,9 +66,22 @@ class PersonnelController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request, PersonnelsAction $action)
     {
-        //
+        try {
+
+            $response_action = $action->saveCompte($request);
+            if (!is_null($response_action['data'])) {
+
+                return redirect()->route('personnel.liste', ['reponse' => $response_action])->with('success', $response_action['message']);
+            } else {
+
+                return redirect()->route('personnel.create', ['reponse' => $response_action])->with('errors', $response_action['message']);
+            }
+        } catch (\exception $th) {
+            //throw $th;
+            return $th;
+        }
     }
 
     /**

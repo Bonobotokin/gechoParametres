@@ -126,7 +126,7 @@
                                 <i class="notika-icon notika-support"></i>
                             </div>
                             <div class="nk-int-st">
-                                <input type="text" class="form-control" name="rolePersonnels[specialites]" placeholder="specialistes">
+                                <input type="number" value="0" class="form-control" name="personnels[salaire]" placeholder="Salaire de base">
                             </div>
                         </div>
                     </div>
@@ -139,7 +139,7 @@
                                 <i class="notika-icon notika-support"></i>
                             </div>
                             <div class="nk-int-st">
-                                <input type="text" class="form-control" name="users[name]" placeholder="telephone 2">
+                                <input type="text" class="form-control" name="users[name]" placeholder="nom d'utilisateurs">
                             </div>
                         </div>
                     </div>
