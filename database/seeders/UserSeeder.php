@@ -23,45 +23,6 @@ class UserSeeder extends Seeder
                 'name' => 'BonoboTokin',
                 'email' => 'bonobotokin@admin.com',
                 'password' => bcrypt('23@tokin.DEV')
-            ],
-            [
-                'name' => 'Benja', // Medecin Chef
-                'email' => 'benja@mdecin.com',
-                'password' => bcrypt('salfa1234')
-            ],
-            [
-                'name' => 'Justine', // Receptioniste
-                'email' => 'rceptioniste@salfa.com',
-                'password' => bcrypt('salfa1234')
-            ],
-
-            [
-                'name' => 'Bezoo', // Magasinier
-                'email' => 'magasinier@salfa.com',
-                'password' => bcrypt('salfa1234')
-            ],
-
-            [
-                'name' => 'julliana', // Pharmacier
-                'email' => 'pharmacien@salfa.com',
-                'password' => bcrypt('salfa1234')
-            ],
-            [
-                'name' => 'Razafy', // Caissier
-                'email' => 'caissier@salfa.com',
-                'password' => bcrypt('salfa1234')
-            ],
-
-            [
-                'name' => 'Bonnie', // Secretaire
-                'email' => 'secretaria@salfa.com',
-                'password' => bcrypt('salfa1234')
-            ],
-
-            [
-                'name' => 'Saholy', // Secretaire
-                'email' => 'compta@salfa.com',
-                'password' => bcrypt('salfa1234')
             ]
         ];
         User::insert($users);

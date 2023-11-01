@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PersonnelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('home/', [HomeController::class, 'index'])->name('home');
+
+
+Route::get('personnels/liste', [PersonnelController::class, 'index'])->name('personnel.liste');
+Route::get('personnels/formulaires', [PersonnelController::class, 'create'])->name('personnel.create');
+Route::post('personnels/formulaire', [PersonnelController::class, 'store'])->name('personnels.store');

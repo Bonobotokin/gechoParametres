@@ -21,33 +21,6 @@ class FonctionSeeder extends Seeder
         $role = [
             [
                 'designation_fonction' => 'Informaticien'
-            ],
-            [
-                'personnel_id' => 'Medecin'
-            ],
-            [
-                'personnel_id' => 'Pharmacien'
-            ],
-            [
-                'personnel_id' => 'Magasinier'
-            ],
-            [
-                'personnel_id' => 'Infirmier'
-            ],
-            [
-                'personnel_id' => 'Medecin'
-            ],
-            [
-                'personnel_id' => 'Receptioniste'
-            ],
-            [
-                'personnel_id' => 'Caissier'
-            ],
-            [
-                'personnel_id' => 'Secretaire'
-            ],
-            [
-                'personnel_id' => 'Comptable'
             ]
         ];
 
