@@ -17,16 +17,4 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
-
-    protected function authenticated(Request $request, $user)
-    {
-
-        if ($user->roles('designation_role')) {
-            // Si l'utilisateur a le rôle "Administrator", redirigez-le vers le projet 1
-            return redirect('http://parametres-gecho-app.local');
-        } else {
-            // Sinon, redirigez-le vers le projet 2
-            return redirect('http://patient-manager');
-        }
-    }
 }
